@@ -158,7 +158,7 @@ MonoBehaviour:
   showToken: {fileID: 1809871358}
   showName: {fileID: 206683789}
   showEmail: {fileID: 523567662}
-  webClientId: '215751123901-2keeu8vb5u5a8nfq7khppi2r08nmgqtn.apps.googleusercontent.com '
+  webClientId: 215751123901-djuk4otp2rl3cjk0cfs2805gs8b9qe1r.apps.googleusercontent.com
 --- !u!114 &71722625
 MonoBehaviour:
   m_ObjectHideFlags: 0
