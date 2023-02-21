@@ -82,6 +82,8 @@ namespace SignInSample {
             else  
             {
                 AddStatusText("Welcome: " + task.Result.DisplayName + "!");
+                AddStatusText("Welcome: " + task.Result.IdToken + "!");
+                AddStatusText("Welcome: " + task.Result.Email + "!");
             }
         }
 
