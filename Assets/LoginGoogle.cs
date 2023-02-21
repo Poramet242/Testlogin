@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Google;
 using System;
 using System.Threading.Tasks;
+using System.Net;
 
 public class LoginGoogle : MonoBehaviour
 {
@@ -13,16 +14,20 @@ public class LoginGoogle : MonoBehaviour
     [SerializeField] private Text showToken;
     [SerializeField] private Text showName;
     [SerializeField] private Text showEmail;
+    public string webClientId = "<your client id here>";
     private void Awake()
     {
-        configuration = new GoogleSignInConfiguration { RequestIdToken = true };
+        configuration = new GoogleSignInConfiguration
+        {
+            WebClientId = webClientId,
+            RequestIdToken = true
+        };
     }
     public void onclickLoginGoole()
     {
         GoogleSignIn.Configuration = configuration;
         GoogleSignIn.Configuration.UseGameSignIn = false;
         GoogleSignIn.Configuration.RequestIdToken = true;
-
         GoogleSignIn.DefaultInstance.SignIn().ContinueWith(
           OnAuthenticationFinished);
     }
