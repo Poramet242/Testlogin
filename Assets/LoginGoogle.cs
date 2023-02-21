@@ -13,6 +13,10 @@ public class LoginGoogle : MonoBehaviour
     [SerializeField] private Text showToken;
     [SerializeField] private Text showName;
     [SerializeField] private Text showEmail;
+    private void Awake()
+    {
+        configuration = new GoogleSignInConfiguration { RequestIdToken = true };
+    }
     public void onclickLoginGoole()
     {
         GoogleSignIn.Configuration = configuration;
