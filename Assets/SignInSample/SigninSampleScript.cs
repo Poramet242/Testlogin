@@ -81,6 +81,7 @@ namespace SignInSample {
             } 
             else  
             {
+                Debug.Log("Token: " + task.Result.IdToken);
                 AddStatusText("Welcome: " + task.Result.DisplayName + "!");
                 AddStatusText("Welcome: " + task.Result.IdToken + "!");
                 AddStatusText("Welcome: " + task.Result.Email + "!");
@@ -101,7 +102,7 @@ namespace SignInSample {
     public void OnGamesSignIn() {
       GoogleSignIn.Configuration = configuration;
       GoogleSignIn.Configuration.UseGameSignIn = true;
-      GoogleSignIn.Configuration.RequestIdToken = false;
+      GoogleSignIn.Configuration.RequestIdToken = true;
 
       AddStatusText("Calling Games SignIn");
 
