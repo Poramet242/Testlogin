@@ -59,11 +59,9 @@ GoogleSignInHandler *gsiHandler;
   method_exchangeImplementations(original, swizzled);
 }
 
-- (BOOL)GoogleSignInAppController:(UIApplication *)application
-    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-  return [self GoogleSignInAppController:application
-           didFinishLaunchingWithOptions:launchOptions];
+- (BOOL)GoogleSignInAppController:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  NSLog(@"GSI application:didFinishLaunchingWithOption:");
+  return [self GoogleSignInAppController:application didFinishLaunchingWithOptions:launchOptions];
 }
 
 /**
@@ -77,7 +75,7 @@ GoogleSignInHandler *gsiHandler;
                                          openURL:url
                                sourceApplication:sourceApplication
                                       annotation:annotation];
-
+  NSLog(@"GSI application:openURL:sourceApplication:annotation: %s", [url.absoluteString UTF8String]);
   return [[GIDSignIn sharedInstance] handleURL:url] || handled;
 }
 
@@ -87,8 +85,8 @@ GoogleSignInHandler *gsiHandler;
 - (BOOL)GoogleSignInAppController:(UIApplication *)app
                           openURL:(NSURL *)url
                           options:(NSDictionary *)options {
-
   BOOL handled = [self GoogleSignInAppController:app openURL:url options:options];
+  NSLog(@"GSI application:openURL:options: %s", [url.absoluteString UTF8String]);
   return [[GIDSignIn sharedInstance] handleURL:url] || handled;
 }
 

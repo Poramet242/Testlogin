@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: ce40e3e7b37a54617a4683dfc0479c71
+guid: 4ba245fad5ee8fb4783ad16c5dad253a
 labels:
-- gvh
-- gvh_version-1.0.4
+- gpsr
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -15,6 +14,11 @@ PluginImporter:
   validateReferences: 1
   platformData:
   - first:
+      Android: Android
+    second:
+      enabled: 1
+      settings: {}
+  - first:
       Any: 
     second:
       enabled: 0
@@ -25,11 +29,6 @@ PluginImporter:
       enabled: 0
       settings:
         DefaultValueInitialized: true
-  - first:
-      iPhone: iOS
-    second:
-      enabled: 1
-      settings: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

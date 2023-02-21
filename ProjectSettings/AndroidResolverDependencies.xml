@@ -10,6 +10,7 @@
     <package>com.facebook.android:facebook-login:[15.1,16)</package>
     <package>com.facebook.android:facebook-share:[15.1,16)</package>
     <package>com.google.android.gms:play-services-auth:20+</package>
+    <package>com.google.signin:google-signin-support:1.0.4</package>
     <package>com.parse.bolts:bolts-android:1.4.0</package>
   </packages>
   <files>
@@ -70,6 +71,7 @@
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-fido-19.0.1.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-tasks-18.0.1.aar</file>
     <file>Assets/Plugins/Android/com.google.code.gson.gson-2.8.8.jar</file>
+    <file>Assets/Plugins/Android/com.google.signin.google-signin-support-1.0.4.aar</file>
     <file>Assets/Plugins/Android/com.google.zxing.core-3.3.3.jar</file>
     <file>Assets/Plugins/Android/com.parse.bolts.bolts-android-1.4.0.jar</file>
     <file>Assets/Plugins/Android/com.parse.bolts.bolts-applinks-1.4.0.jar</file>
