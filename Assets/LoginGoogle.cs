@@ -11,9 +11,6 @@ public class LoginGoogle : MonoBehaviour
 {
     private GoogleSignInConfiguration configuration;
     private string tokenGoogle_str;
-    [SerializeField] private Text showToken;
-    [SerializeField] private Text showName;
-    [SerializeField] private Text showEmail;
     public string webClientId = "<your client id here>";
     private void Awake()
     {
@@ -30,6 +27,11 @@ public class LoginGoogle : MonoBehaviour
         GoogleSignIn.Configuration.RequestIdToken = true;
         GoogleSignIn.DefaultInstance.SignIn().ContinueWith(
           OnAuthenticationFinished);
+    }
+    public void OnSignOut()
+    {
+        Debug.Log("Calling SignOut");
+        GoogleSignIn.DefaultInstance.SignOut();
     }
     internal void OnAuthenticationFinished(Task<GoogleSignInUser> task)
     {
@@ -55,15 +57,9 @@ public class LoginGoogle : MonoBehaviour
         else
         {
             tokenGoogle_str = "Token google: " + task.Result.IdToken;
-            showToken.text = tokenGoogle_str;
-
-            showName.text = "Display name: " + task.Result.GivenName;
-            showEmail.text = "E-mail: " + task.Result.Email;
-
             Debug.Log("Name: " + task.Result.DisplayName + "!");
             Debug.Log("IDToken: " + task.Result.IdToken + "!");
             Debug.Log("Email: " + task.Result.Email + "!");
-
         }
     }
 }
